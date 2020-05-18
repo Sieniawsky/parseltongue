@@ -1,4 +1,11 @@
 source "https://rubygems.org"
 ruby '2.5.1'
 
-gem 'rake'
+group :development do
+  gem 'rake'
+  gem 'ap'
+end
+
+group :test do
+  gem 'rspec'
+end
