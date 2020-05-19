@@ -16,7 +16,7 @@ module Parseltongue
     end
 
     def self.from_base64(base64)
-      binary_sequence = base64.unpack(BASE64_NO_LINE_FEED).first
+      binary_sequence = base64.unpack1(BASE64_NO_LINE_FEED)
       bytes = binary_sequence.unpack(UNSIGNED_8_BIT_FULL_SEQUENCE)
 
       new(bytes)
@@ -28,7 +28,7 @@ module Parseltongue
 
     def to_hex
       binary_sequence = @bytes.pack(UNSIGNED_8_BIT_FULL_SEQUENCE)
-      binary_sequence.unpack(HEX_HIGH_NIBBLE_FIRST_FULL_SEQUENCE).first
+      binary_sequence.unpack1(HEX_HIGH_NIBBLE_FIRST_FULL_SEQUENCE)
     end
 
     def to_base64
