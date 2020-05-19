@@ -1,8 +1,13 @@
 path = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(path) unless $LOAD_PATH.include?(path)
 
-require 'bundler'
-require 'parseltongue' # You know what to do.
+require 'rake'
+require 'rspec/core/rake_task'
+require 'parseltongue'
+
+RSpec::Core::RakeTask.new(:spec) do |t|
+  t.pattern = Dir.glob('spec/**/*_spec.rb')
+end
 
 desc 'Start a console session with parseltongue loaded'
 task :console do
@@ -13,4 +18,4 @@ task :console do
   IRB.start
 end
 
-task :default => :console
+task :default  => :spec
