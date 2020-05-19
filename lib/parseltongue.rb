@@ -8,4 +8,4 @@ module Parseltongue
   end
 end
 
-Dir.glob(Parseltongue.root.join('', '**/*.rb')).sort.each { |file| require file }
+Dir.glob(Parseltongue.root.join('**/*.rb')).sort.each { |file| require file }
