@@ -1,0 +1,42 @@
+AllCops:
+  TargetRubyVersion: 2.5.1
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Description: Checks for a newline after attribute accessor.
+  Enabled: true
+
+Layout/LineLength:
+  Description: This cop checks the length of lines in the source code. The maximum length is configurable.
+  Max: 100
+
+Layout/SpaceAroundMethodCallOperator:
+  Description: Checks method call operators to not have spaces around them.
+  Enabled: true
+
+Lint/RaiseException:
+  Description: This cop checks for raise or fail statements which are raising Exception class.
+  Enabled: true
+
+Lint/StructNewOverride:
+  Description: This cop checks unexpected overrides of the Struct built-in methods via Struct.new.
+  Enabled: true
+
+Style/Documentation:
+  Description: This cop checks for missing top-level documentation of classes and modules.
+  Enabled: false
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Style/HashEachMethods:
+  Description: This cop checks for uses of each_key and each_value Hash methods.
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/SlicingWithRange:
+  Enabled: true

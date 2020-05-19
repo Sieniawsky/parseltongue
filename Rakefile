@@ -1,4 +1,6 @@
-path = File.expand_path('../lib', __FILE__)
+# frozen_string_literal: true
+
+path = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(path) unless $LOAD_PATH.include?(path)
 
 require 'rake'
@@ -18,4 +20,4 @@ task :console do
   IRB.start
 end
 
-task :default  => :spec
+task default: :spec
