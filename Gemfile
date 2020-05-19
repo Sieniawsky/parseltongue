@@ -2,7 +2,6 @@ source "https://rubygems.org"
 ruby '2.5.1'
 
 group :development do
-  gem 'ap'
   gem 'awesome_print'
   gem 'rake'
 end
