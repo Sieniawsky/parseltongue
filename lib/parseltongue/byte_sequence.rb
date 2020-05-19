@@ -6,6 +6,8 @@ BASE64_NO_LINE_FEED = 'm0'
 
 module Parseltongue
   class ByteSequence
+    attr_reader :bytes
+
     def self.from_hex(hex)
       binary_sequence = [hex].pack(HEX_HIGH_NIBBLE_FIRST_FULL_SEQUENCE)
       bytes = binary_sequence.unpack(UNSIGNED_8_BIT_FULL_SEQUENCE)
