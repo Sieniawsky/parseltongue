@@ -21,6 +21,14 @@ Lint/StructNewOverride:
   Description: This cop checks unexpected overrides of the Struct built-in methods via Struct.new.
   Enabled: true
 
+Naming/VariableName:
+  Description: This cop makes sure that all variables use the configured style, snake_case or camelCase, for their names.
+  EnforcedStyle: snake_case
+
+Naming/VariableNumber:
+  Description: This cop makes sure that all numbered variables use the configured style, snake_case, normalcase, or non_integer, for their numbering.
+  EnforcedStyle: snake_case
+
 Style/Documentation:
   Description: This cop checks for missing top-level documentation of classes and modules.
   Enabled: false
