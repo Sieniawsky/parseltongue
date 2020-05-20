@@ -26,6 +26,15 @@ module Parseltongue
       @bytes = bytes
     end
 
+    def xor(byte_sequence)
+      if @bytes.size != byte_sequence.bytes.size
+        raise ArgumentError, 'bytes sequences must be of equal length'
+      end
+
+      result = @bytes.zip(byte_sequence.bytes).map { |a, b| a ^ b }
+      self.class.new(result)
+    end
+
     def to_hex
       binary_sequence = @bytes.pack(UNSIGNED_8_BIT_FULL_SEQUENCE)
       binary_sequence.unpack1(HEX_HIGH_NIBBLE_FIRST_FULL_SEQUENCE)
