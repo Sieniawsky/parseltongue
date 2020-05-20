@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 RSpec.describe Parseltongue::ByteSequence do
   describe '::from_hex' do
     subject { described_class.from_hex(value).bytes }

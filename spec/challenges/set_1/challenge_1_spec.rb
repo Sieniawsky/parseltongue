@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 RSpec.describe 'Set 1 challenge 1' do
   describe 'Convert hex to base64' do
     let(:input_hex) { read_file('challenges/set_1/challenge_1/hex.txt') }

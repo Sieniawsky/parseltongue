@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 RSpec.describe 'Set 1 challenge 2' do
   describe 'Fixed XOR' do
     let(:input_hex_1) { read_file('challenges/set_1/challenge_2/hex_1.txt') }
